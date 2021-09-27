@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.volcengine.plugin.toolwindow.MarsToolWindow">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.chentaodemo.plugin.toolwindow.ToolWindowOne">
   <grid id="27dc6" binding="myToolWindowContent" layout-manager="GridLayoutManager" row-count="10" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="15" left="10" bottom="0" right="0"/>
     <constraints>
@@ -13,7 +13,7 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="7a6ec" class="javax.swing.JLabel" binding="welcomeLabel">
+      <component id="7a6ec" class="javax.swing.JLabel">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -51,7 +51,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="e62b3" class="javax.swing.JLabel" binding="step5">
+      <component id="e62b3" class="javax.swing.JLabel">
         <constraints>
           <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -70,7 +70,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="3d2fc" class="javax.swing.JLabel" binding="step1">
+          <component id="3d2fc" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="613" height="16"/>
@@ -127,7 +127,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="8fcf1" class="javax.swing.JLabel" binding="step2">
+          <component id="8fcf1" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="613" height="16"/>
@@ -175,7 +175,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="3eda6" class="javax.swing.JLabel" binding="step4">
+          <component id="3eda6" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -214,7 +214,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="76ac1" class="javax.swing.JLabel" binding="step3">
+          <component id="76ac1" class="javax.swing.JLabel">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>

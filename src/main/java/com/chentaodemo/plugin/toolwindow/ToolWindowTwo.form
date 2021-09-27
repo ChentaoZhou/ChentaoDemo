@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.volcengine.plugin.toolwindow.BaselineWindow">
-  <grid id="27dc6" binding="baselinePanel" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.chentaodemo.plugin.toolwindow.ToolWindowTwo">
+  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="15" left="10" bottom="0" right="0"/>
     <constraints>
       <xy x="20" y="20" width="457" height="422"/>
@@ -10,16 +10,16 @@
     </properties>
     <border type="none"/>
     <children>
-      <component id="4722f" class="javax.swing.JLabel" binding="titleLabel">
+      <component id="4722f" class="javax.swing.JLabel">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <font size="22"/>
-          <text value="Choose veMARS baseline"/>
+          <text value="Empty toolwindow"/>
         </properties>
       </component>
-      <grid id="18a77" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="18a77" layout-manager="GridLayoutManager" row-count="4" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -27,7 +27,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="c9d20" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="c9d20" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -35,14 +35,6 @@
             <properties/>
             <border type="none"/>
             <children>
-              <component id="e5b0e" class="javax.swing.JComboBox" binding="baselineComboBox">
-                <constraints>
-                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <preferredSize width="300" height="38"/>
-                </properties>
-              </component>
               <component id="1b16c" class="javax.swing.JLabel" binding="notificationLabel">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -52,31 +44,9 @@
                   <text value="Label"/>
                 </properties>
               </component>
-              <component id="fc2a5" class="javax.swing.JLabel">
-                <constraints>
-                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="请选择您要使用的基线版本"/>
-                </properties>
-              </component>
-              <component id="31f90" class="javax.swing.JLabel" binding="moduleSelectLabel">
-                <constraints>
-                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <text value="请选择您要添加基线和依赖的模块"/>
-                </properties>
-              </component>
-              <component id="73f2d" class="javax.swing.JComboBox" binding="moduleSelectComboBox">
-                <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties/>
-              </component>
               <vspacer id="9df97">
                 <constraints>
-                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false">
                     <minimum-size width="10" height="10"/>
                     <preferred-size width="10" height="10"/>
                     <maximum-size width="10" height="10"/>
@@ -122,28 +92,11 @@
               </grid>
             </constraints>
           </vspacer>
-          <component id="31486" class="javax.swing.JLabel">
+          <component id="209b6" class="javax.swing.JProgressBar">
             <constraints>
-              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="5" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <font size="10"/>
-              <text value="下载、解压、导入过程较为耗时，请耐心等待3到10秒"/>
-            </properties>
-          </component>
-          <component id="209b6" class="javax.swing.JProgressBar" binding="progressBar">
-            <constraints>
-              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties/>
-          </component>
-          <component id="4123c" class="javax.swing.JLabel" binding="progressLabel">
-            <constraints>
-              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value=""/>
-            </properties>
           </component>
         </children>
       </grid>

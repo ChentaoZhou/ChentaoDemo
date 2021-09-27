@@ -6,11 +6,10 @@ import java.awt.Dimension
 import javax.swing.JComponent
 
 class ExampleDialogWrapper(
-    val project: Project,
-    baselineVersion: String
+    val project: Project
 ) : DialogWrapper(project) {
 
-    private var mainPanel = ExamplePanel(project, baselineVersion, this)
+    private var mainPanel = ExamplePanel(project)
 
     init {
         init()

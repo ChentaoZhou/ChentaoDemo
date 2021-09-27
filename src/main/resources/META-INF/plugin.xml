@@ -1,11 +1,11 @@
 <idea-plugin>
     <id>com.volcengine.chentaoDemo</id>
-    <name>Plugin display name here</name>
-    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+    <name>CTDemo</name>
+    <vendor email="zhouchentao.z@gmail.com" url="">CTDemo</vendor>
 
     <description><![CDATA[
-    Enter short description for your plugin here.<br>
-    <em>most HTML tags may be used</em>
+        This is a plugin demo
+        <em>「CTDemo, this is a plugin demo」</em>
     ]]></description>
 
     <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -13,9 +13,12 @@
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.android</depends>
     <depends>com.intellij.modules.androidstudio</depends>
+    <depends>org.intellij.groovy</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <!-- anchor 为注册的默认显示方向，bottom 为界面最下方，此外还有 left right 可用 -->
+<!--        <toolWindow id="Demo" secondary="true" anchor="right" factoryClass="com.chentaodemo.plugin.toolwindow.MyToolWindowFactory"/>-->
+        <toolWindow secondary="false" anchor="bottom" factoryClass="com.chentaodemo.plugin.toolwindow.MyToolWindowFactory"/>
     </extensions>
 
     <actions>
@@ -24,15 +27,22 @@
                 id="SecondAction"
                 text="Second Action"
                 description="A second action that shows a notification"/>
-        <group id = "ChentaoDemo.TopMenu"
+        <action class="com.chentaodemo.plugin.actions.OpenToolWindowAction"
+                id="AddAarAction"
+                icon="/icons/add_feature.svg"
+                text="Create New ToolWindow Action"
+                description="A action that add new aar into project">
+        </action>
+        <group id="ChentaoDemo.TopMenu"
                text="_Demo Plugin"
                description="Demo Plugin in top menu">
 
-            <reference id="SecondAction"/>
+            <reference id="AddAarAction"/>
             <separator/>
             <action class="com.chentaodemo.plugin.actions.HelloWorldAction"
                     id="DemoAction"
                     text="Hello World Action"
+                    icon="/icons/hello.svg"
                     description="This is a test action">
                 <keyboard-shortcut first-keystroke="control alt p" keymap="$default"/>
             </action>
@@ -46,20 +56,12 @@
             <reference id="SecondAction"/>
         </group>
 
-        <group id="MarsPlugin.TopMenu"
-               text="veMARS"
-               description="Mars plugin toolbar menu">
-            <action class="com.chentaodemo.plugin.actions.OpenToolWindowAction"
-                    id="AddAarAction"
-                    text="新增组件到工程中"
-                    description="A action that add new aar into project">
-            </action>
-            <add-to-group group-id="MainMenu" anchor="last"/>
-        </group>
-        <action id="MarsPlugin.CreateNewProject" class="com.chentaodemo.plugin.actions.CreateNewWizardAction" text="Create New veMARS Project">
-            <add-to-group group-id="WelcomeScreen.QuickStart.IDEA" anchor="after" relative-to-action="WelcomeScreen.CreateNewProject"/>
-            <add-to-group group-id="JavaNewProjectOrModuleGroup" anchor="after"
-                          relative-to-action="NewProject"/>
+        <action id="MarsPlugin.CreateNewProject" class="com.chentaodemo.plugin.actions.CreateNewWizardAction"
+                icon="/icons/create_new.svg" text="Create New MyWizardStep">
+            <add-to-group group-id="WelcomeScreen.QuickStart.IDEA" anchor="after"
+                          relative-to-action="WelcomeScreen.CreateNewProject"/>
+            <add-to-group group-id="ChentaoDemo.TopMenu" anchor="after"
+                          relative-to-action="SecondAction"/>
         </action>
 
     </actions>

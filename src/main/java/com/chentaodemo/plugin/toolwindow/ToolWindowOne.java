@@ -5,7 +5,6 @@ import com.intellij.notification.NotificationGroup;
 import com.intellij.notification.NotificationType;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
@@ -52,13 +51,6 @@ public class ToolWindowOne {
             generateNotifacation("步骤4弹窗", project, NotificationType.INFORMATION);
         });
     }
-
-    private int recheckBaseline() {
-        return Messages.showYesNoDialog(
-                "在进行下一步前，需再次确认基线版本" + "\r\n 是否进入'选择基线'页面",
-                "Ops.. 未缓存基线版本", Messages.getWarningIcon());
-    }
-
 
     public JPanel getContent() {
         return myToolWindowContent;
