@@ -1,0 +1,66 @@
+<idea-plugin>
+    <id>com.volcengine.chentaoDemo</id>
+    <name>Plugin display name here</name>
+    <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
+
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.android</depends>
+    <depends>com.intellij.modules.androidstudio</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action class="com.chentaodemo.plugin.actions.HelloWorldAction"
+                id="SecondAction"
+                text="Second Action"
+                description="A second action that shows a notification"/>
+        <group id = "ChentaoDemo.TopMenu"
+               text="_Demo Plugin"
+               description="Demo Plugin in top menu">
+
+            <reference id="SecondAction"/>
+            <separator/>
+            <action class="com.chentaodemo.plugin.actions.HelloWorldAction"
+                    id="DemoAction"
+                    text="Hello World Action"
+                    description="This is a test action">
+                <keyboard-shortcut first-keystroke="control alt p" keymap="$default"/>
+            </action>
+            <add-to-group group-id="MainMenu" anchor="last"/>
+        </group>
+
+        <group id="SecondGroup"
+               text="My Second Group"
+               popup="true">
+            <add-to-group group-id="ChentaoDemo.TopMenu" anchor="first"/>
+            <reference id="SecondAction"/>
+        </group>
+
+        <group id="MarsPlugin.TopMenu"
+               text="veMARS"
+               description="Mars plugin toolbar menu">
+            <action class="com.chentaodemo.plugin.actions.OpenToolWindowAction"
+                    id="AddAarAction"
+                    text="新增组件到工程中"
+                    description="A action that add new aar into project">
+            </action>
+            <add-to-group group-id="MainMenu" anchor="last"/>
+        </group>
+        <action id="MarsPlugin.CreateNewProject" class="com.chentaodemo.plugin.actions.CreateNewWizardAction" text="Create New veMARS Project">
+            <add-to-group group-id="WelcomeScreen.QuickStart.IDEA" anchor="after" relative-to-action="WelcomeScreen.CreateNewProject"/>
+            <add-to-group group-id="JavaNewProjectOrModuleGroup" anchor="after"
+                          relative-to-action="NewProject"/>
+        </action>
+
+    </actions>
+</idea-plugin>
