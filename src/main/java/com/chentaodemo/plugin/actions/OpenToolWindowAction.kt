@@ -7,7 +7,7 @@ import com.intellij.openapi.wm.ToolWindowManager
 class OpenToolWindowAction:AnAction() {
     override fun actionPerformed(event: AnActionEvent) {
         if (event.project != null) {
-            val toolWindow = ToolWindowManager.getInstance(event.project!!).getToolWindow("veMARS")
+            val toolWindow = ToolWindowManager.getInstance(event.project!!).getToolWindow("Demo")
             toolWindow?.show()
         }
     }

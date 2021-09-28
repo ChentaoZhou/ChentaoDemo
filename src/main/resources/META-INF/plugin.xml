@@ -17,8 +17,8 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- anchor 为注册的默认显示方向，bottom 为界面最下方，此外还有 left right 可用 -->
-<!--        <toolWindow id="Demo" secondary="true" anchor="right" factoryClass="com.chentaodemo.plugin.toolwindow.MyToolWindowFactory"/>-->
-        <toolWindow secondary="false" anchor="bottom" factoryClass="com.chentaodemo.plugin.toolwindow.MyToolWindowFactory"/>
+        <toolWindow id="Demo" secondary="true" anchor="right" factoryClass="com.chentaodemo.plugin.toolwindow.MyToolWindowFactory"/>
+<!--        <toolWindow secondary="false" anchor="bottom" factoryClass="com.chentaodemo.plugin.toolwindow.MyToolWindowFactory"/>-->
     </extensions>
 
     <actions>

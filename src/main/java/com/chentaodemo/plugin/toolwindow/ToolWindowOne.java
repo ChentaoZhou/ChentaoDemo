@@ -63,9 +63,9 @@ public class ToolWindowOne {
 
     private void createUIComponents() {
         //init custom component here
-        subTitle2 = new LinkLabel("在浏览器中查阅相关文档", "https://www.volcengine.com/docs/6468/71258");
-        clickableLink1 = new LinkLabel("创建一个账户，并开通veMARS服务", "https://www.volcengine.com/docs/6468/71606");
-        clickableLink2 = new LinkLabel("在veMARS平台上创建一个应用程序", "https://www.volcengine.com/docs/6468/71519");
+        subTitle2 = new LinkLabel("subTitle2", "");
+        clickableLink1 = new LinkLabel("clickableLink1", "");
+        clickableLink2 = new LinkLabel("clickableLink2", "");
 
     }
 }
