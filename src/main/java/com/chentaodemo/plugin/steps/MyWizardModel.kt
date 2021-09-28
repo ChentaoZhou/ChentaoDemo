@@ -16,7 +16,7 @@ class MyWizardModel(project: Project?) : WizardModel() {
     val project = project
 
     override fun handleFinished() {
-        val notificationGroup = NotificationGroup("BaselineWindow", NotificationDisplayType.BALLOON)
+        val notificationGroup = NotificationGroup("MyWizardModel", NotificationDisplayType.BALLOON)
         notificationGroup.createNotification("ProjectWizardModel done", NotificationType.INFORMATION).notify(project)
     }
 }
